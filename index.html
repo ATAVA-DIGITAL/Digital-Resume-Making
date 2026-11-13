@@ -44,6 +44,17 @@
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero, .sidebar-section, .content-section {
+            animation: fadeIn 0.8s ease-out;
         }
 
         /* Hero Section */
@@ -57,7 +68,6 @@
             flex-wrap: wrap;
         }
 
-        /* Professional Photo Styling */
         .profile-img-wrapper {
             width: 155px;
             height: 155px;
@@ -70,6 +80,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img-wrapper:hover {
+            transform: scale(1.03);
         }
 
         .profile-img-wrapper img {
@@ -145,7 +160,7 @@
             text-decoration: none;
             cursor: pointer;
             border: none;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
         }
 
         .btn-whatsapp {
@@ -155,7 +170,8 @@
 
         .btn-whatsapp:hover {
             background-color: var(--whatsapp-hover);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
         }
 
         .btn-call {
@@ -165,7 +181,8 @@
 
         .btn-call:hover {
             background-color: var(--accent-hover);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
         }
 
         .btn-print {
@@ -176,7 +193,7 @@
 
         .btn-print:hover {
             background-color: rgba(255, 255, 255, 0.22);
-            transform: translateY(-1px);
+            transform: translateY(-2px);
         }
 
         /* Main Content Grid */
@@ -194,10 +211,6 @@
 
         .sidebar-section {
             margin-bottom: 28px;
-        }
-
-        .sidebar-section:last-child {
-            margin-bottom: 0;
         }
 
         .section-title {
@@ -256,6 +269,11 @@
             border-radius: 10px;
             padding: 12px 14px;
             margin-bottom: 12px;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .doc-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .doc-row {
@@ -294,6 +312,13 @@
             font-weight: 600;
             text-align: center;
             color: var(--secondary);
+            transition: all 0.2s ease;
+        }
+
+        .lang-badge:hover {
+            background: #e0f2fe;
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
         /* Right Content Area */
@@ -305,15 +330,16 @@
             margin-bottom: 32px;
         }
 
-        .content-section:last-child {
-            margin-bottom: 0;
-        }
-
         .exp-card {
             background: #f8fafc;
             border-left: 4px solid var(--accent);
             padding: 20px;
             border-radius: 0 10px 10px 0;
+            transition: transform 0.2s ease;
+        }
+
+        .exp-card:hover {
+            transform: translateX(3px);
         }
 
         .exp-header {
@@ -372,12 +398,58 @@
             gap: 12px;
             font-size: 0.9rem;
             font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .skill-item:hover {
+            background: #ffffff;
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
         }
 
         .skill-item i {
             color: var(--whatsapp);
             font-size: 1.1rem;
             margin-top: 2px;
+        }
+
+        /* Gallery & Media Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .media-card {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .media-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .media-card img, .media-card video {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .media-caption {
+            padding: 10px 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--secondary);
+            text-align: center;
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
         }
 
         .edu-box {
@@ -422,55 +494,22 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px 20px;
-            }
-            .hero-meta, .action-buttons {
-                justify-content: center;
-            }
-            .main-grid {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                border-right: none;
-                border-bottom: 1px solid var(--border-color);
-            }
-            .content {
-                padding: 25px 20px;
-            }
+            body { padding: 10px; }
+            .hero { flex-direction: column; text-align: center; padding: 30px 20px; }
+            .hero-meta, .action-buttons { justify-content: center; }
+            .main-grid { grid-template-columns: 1fr; }
+            .sidebar { border-right: none; border-bottom: 1px solid var(--border-color); }
+            .content { padding: 25px 20px; }
+            .gallery-grid { grid-template-columns: 1fr; }
         }
 
-        /* Print Styles for Clean PDF Export */
+        /* Print Styles */
         @media print {
-            body {
-                background: #ffffff;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                border-radius: 0;
-                max-width: 100%;
-            }
-            .action-buttons, footer {
-                display: none !important;
-            }
-            .hero {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-                padding: 25px;
-            }
-            .main-grid {
-                grid-template-columns: 290px 1fr;
-            }
-            .sidebar, .exp-card, .skill-item, .doc-card, .lang-badge {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
+            body { background: #ffffff; padding: 0; }
+            .container { box-shadow: none; border-radius: 0; max-width: 100%; }
+            .action-buttons, footer, .media-card { display: none !important; }
+            .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 25px; }
+            .main-grid { grid-template-columns: 290px 1fr; }
         }
     </style>
 </head>
@@ -480,7 +519,7 @@
     <!-- Hero Header -->
     <header class="hero">
         <div class="profile-img-wrapper">
-            <img src="photo.jpg" alt="Muhammad Ajmal Nazir" onerror="this.src='https://via.placeholder.com/150x150?text=Photo'">
+            <img src="photo.png" alt="Muhammad Ajmal Nazir" onerror="this.src='https://via.placeholder.com/150x150?text=Photo'">
         </div>
         <div class="hero-info">
             <span class="badge"><i class="fa-solid fa-id-card"></i> UAE Licensed Driver</span>
@@ -619,6 +658,49 @@
                         <li>Ensured safe and timely transportation of goods and passengers with thorough pre-trip vehicle safety checks.</li>
                         <li>Demonstrated excellent route navigation, time management, and proactive hazard awareness under pressure.</li>
                     </ul>
+                </div>
+            </section>
+
+            <!-- Fleet & Experience Gallery (Photos & Videos) -->
+            <section class="content-section">
+                <h3 class="section-title"><i class="fa-solid fa-photo-film"></i> Fleet & Operations Gallery</h3>
+                
+                <!-- Photos Grid (4 Photos) -->
+                <div class="gallery-grid">
+                    <div class="media-card">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=80" alt="UAE Highway Driving">
+                        <div class="media-caption">Safe Highway Transport</div>
+                    </div>
+                    <div class="media-card">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=600&q=80" alt="Route Navigation">
+                        <div class="media-caption">GPS Route Planning</div>
+                    </div>
+                    <div class="media-card">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Goods Delivery Operations">
+                        <div class="media-caption">Cargo & Goods Handling</div>
+                    </div>
+                    <div class="media-card">
+                        <img src="https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&w=600&q=80" alt="Vehicle Inspection">
+                        <div class="media-caption">Pre-Trip Safety Inspection</div>
+                    </div>
+                </div>
+
+                <!-- Videos Grid (2 Videos) -->
+                <div class="gallery-grid" style="grid-template-columns: repeat(2, 1fr); margin-top: 15px;">
+                    <div class="media-card">
+                        <video controls poster="https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&w=600&q=80">
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-highway-traffic-in-the-evening-4152-large.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="media-caption"><i class="fa-solid fa-video"></i> UAE Route Navigation Demo</div>
+                    </div>
+                    <div class="media-card">
+                        <video controls poster="https://images.unsplash.com/photo-1519641481854-f23707312ae1?auto=format&fit=crop&w=600&q=80">
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-truck-driving-on-a-highway-at-sunset-4150-large.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="media-caption"><i class="fa-solid fa-video"></i> Heavy Vehicle Driving & Safety</div>
+                    </div>
                 </div>
             </section>
 
