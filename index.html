@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ajmal Nazir | Professional Driver & Trucker - UAE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #0284c7;
+            --accent-hover: #0369a1;
+            --whatsapp: #16a34a;
+            --whatsapp-hover: #15803d;
+            --bg-body: #f1f5f9;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: #ffffff;
+            padding: 40px 35px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .profile-img-wrapper {
+            width: 145px;
+            height: 175px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.9);
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+            background: #334155;
+        }
+
+        .profile-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .hero-info {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(2, 132, 199, 0.25);
+            color: #7dd3fc;
+            border: 1px solid rgba(125, 211, 252, 0.4);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero-info h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .hero-info h2 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+            margin-bottom: 22px;
+        }
+
+        .hero-meta span i {
+            color: #38bdf8;
+            margin-right: 6px;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: #ffffff;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-call {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .btn-call:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-print {
+            background-color: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-print:hover {
+            background-color: rgba(255, 255, 255, 0.22);
+            transform: translateY(-1px);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 330px 1fr;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #f8fafc;
+            padding: 30px 25px;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .sidebar-section {
+            margin-bottom: 28px;
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title i {
+            color: var(--accent);
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .info-value a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .info-value a:hover {
+            text-decoration: underline;
+        }
+
+        .doc-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 12px;
+        }
+
+        .doc-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            padding: 4px 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .doc-row:last-child {
+            border-bottom: none;
+        }
+
+        .doc-row span:first-child {
+            color: var(--text-muted);
+        }
+
+        .doc-row span:last-child {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .lang-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .lang-badge {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 7px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--secondary);
+        }
+
+        /* Right Content Area */
+        .content {
+            padding: 35px;
+        }
+
+        .content-section {
+            margin-bottom: 32px;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-card {
+            background: #f8fafc;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .exp-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .exp-company {
+            font-size: 0.92rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .exp-duration {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .exp-list {
+            padding-left: 18px;
+            color: var(--text-main);
+            font-size: 0.94rem;
+        }
+
+        .exp-list li {
+            margin-bottom: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-item {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            padding: 14px 16px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .skill-item i {
+            color: var(--whatsapp);
+            font-size: 1.1rem;
+            margin-top: 2px;
+        }
+
+        .edu-box {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .edu-icon {
+            width: 42px;
+            height: 42px;
+            background: #e0f2fe;
+            color: var(--accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .declaration-box {
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 16px 20px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 16px;
+            font-size: 0.82rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .hero-meta, .action-buttons {
+                justify-content: center;
+            }
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .content {
+                padding: 25px 20px;
+            }
+        }
+
+        /* Print Styles for Clean PDF Export */
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+            .action-buttons, footer {
+                display: none !important;
+            }
+            .hero {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 25px;
+            }
+            .main-grid {
+                grid-template-columns: 290px 1fr;
+            }
+            .sidebar, .exp-card, .skill-item, .doc-card, .lang-badge {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="profile-img-wrapper">
+            <!-- GitHub-ൽ അപ്‌ലോഡ് ചെയ്യുമ്പോൾ ഫോട്ടോയ്ക്ക് photo.png എന്ന പേര് നൽകുക -->
+            <img src="photo.png" alt="Muhammad Ajmal Nazir" onerror="this.src='https://via.placeholder.com/150x180?text=Photo'">
+        </div>
+        <div class="hero-info">
+            <span class="badge"><i class="fa-solid fa-id-card"></i> UAE Licensed Driver</span>
+            <h1>MUHAMMAD AJMAL NAZIR</h1>
+            <h2>PROFESSIONAL DRIVER / TRUCKER</h2>
+            <div class="hero-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Umm Al Quwain, UAE</span>
+                <span><i class="fa-solid fa-briefcase"></i> 2 Years UAE Experience</span>
+                <span><i class="fa-solid fa-passport"></i> Employment Visa</span>
+            </div>
+            <div class="action-buttons">
+                <a href="https://wa.me/971588055814?text=Hello%20Muhammad%20Ajmal%20Nazir,%20I%20reviewed%20your%20Digital%20CV." target="_blank" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
+                </a>
+                <a href="tel:+971588055814" class="btn btn-call">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+                <button onclick="window.print()" class="btn btn-print">
+                    <i class="fa-solid fa-file-pdf"></i> Download / Print CV
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-grid">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <!-- Contact Details -->
+            <div class="sidebar-section">
+                <h3 class="section-title"><i class="fa-solid fa-address-book"></i> Contact Details</h3>
+                <ul class="info-list">
+                    <li>
+                        <span class="info-label">Phone / WhatsApp</span>
+                        <span class="info-value"><a href="tel:+971588055814">+971 588 055814</a></span>
+                    </li>
+                    <li>
+                        <span class="info-label">Email Address</span>
+                        <span class="info-value"><a href="mailto:ajmal631822@gmail.com">ajmal631822@gmail.com</a></span>
+                    </li>
+                    <li>
+                        <span class="info-label">Current Location</span>
+                        <span class="info-value">Umm Al Quwain, UAE</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Driving License -->
+            <div class="sidebar-section">
+                <h3 class="section-title"><i class="fa-solid fa-car"></i> Driving License</h3>
+                <div class="doc-card">
+                    <div class="doc-row">
+                        <span>License Type</span>
+                        <span>UAQ (Light Vehicle)</span>
+                    </div>
+                    <div class="doc-row">
+                        <span>License No</span>
+                        <span>82190</span>
+                    </div>
+                    <div class="doc-row">
+                        <span>Issue Date</span>
+                        <span>11/11/2022</span>
+                    </div>
+                    <div class="doc-row">
+                        <span>Expiry Date</span>
+                        <span>09/11/2029</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Passport Details -->
+            <div class="sidebar-section">
+                <h3 class="section-title"><i class="fa-solid fa-passport"></i> Passport Details</h3>
+                <div class="doc-card">
+                    <div class="doc-row">
+                        <span>Passport No</span>
+                        <span>MT9821411</span>
+                    </div>
+                    <div class="doc-row">
+                        <span>Issue Date</span>
+                        <span>21/10/2021</span>
+                    </div>
+                    <div class="doc-row">
+                        <span>Expiry Date</span>
+                        <span>20/10/2027</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Info -->
+            <div class="sidebar-section">
+                <h3 class="section-title"><i class="fa-solid fa-user"></i> Personal Info</h3>
+                <div class="doc-card">
+                    <div class="doc-row">
+                        <span>Gender</span>
+                        <span>Male</span>
+                    </div>
+                    <div class="doc-row">
+                        <span>Nationality</span>
+                        <span>Pakistan</span>
+                    </div>
+                    <div class="doc-row">
+                        <span>Visa Status</span>
+                        <span>Employment</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="sidebar-section">
+                <h3 class="section-title"><i class="fa-solid fa-language"></i> Languages</h3>
+                <div class="lang-grid">
+                    <div class="lang-badge">English</div>
+                    <div class="lang-badge">Hindi</div>
+                    <div class="lang-badge">Urdu</div>
+                    <div class="lang-badge">Arabic</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Main Content -->
+        <main class="content">
+            <!-- Work Experience -->
+            <section class="content-section">
+                <h3 class="section-title"><i class="fa-solid fa-briefcase"></i> Work Experience</h3>
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-title">Driver / Trucker</div>
+                            <div class="exp-company">United Arab Emirates (UAE)</div>
+                        </div>
+                        <span class="exp-duration">2 Years Experience</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li>Operated vehicles safely across various UAE routes while strictly following all RTA traffic rules and regulations.</li>
+                        <li>Ensured safe and timely transportation of goods and passengers with thorough pre-trip vehicle safety checks.</li>
+                        <li>Demonstrated excellent route navigation, time management, and proactive hazard awareness under pressure.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Driving & Technical Skills -->
+            <section class="content-section">
+                <h3 class="section-title"><i class="fa-solid fa-gears"></i> Driving & Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Traffic Laws & RTA Regulations Knowledge</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>GPS Navigation & Efficient Route Planning</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Defensive Driving Techniques & Hazard Awareness</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Vehicle Maneuvering & Parallel Parking in Tight Spaces</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="content-section">
+                <h3 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                <div class="edu-box">
+                    <div class="edu-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                        <strong style="color: var(--primary); font-size: 1rem;">Matriculation (Metric)</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Secondary School Certification</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Declaration -->
+            <section class="content-section">
+                <h3 class="section-title"><i class="fa-solid fa-signature"></i> Declaration</h3>
+                <div class="declaration-box">
+                    "I hereby declare that the information furnished above is authentic and true to the best of my knowledge and belief."
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2026 Muhammad Ajmal Nazir &bull; Digital Portfolio & Resume
+    </footer>
+</div>
+
+</body>
+</html>
